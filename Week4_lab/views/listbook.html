@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    table,th,td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<h1> Welcome
+</h1>
+</br>
+<a href="/">Home</a> <a href = '/newbook'>Add new book</a>
+<h3>The available books are:
+  <table>
+    <tr>
+      <th>title</th>
+      <th>author</th>
+      <th>topic</th>
+      <th>cost</th>
+    </tr>
+    <% for ( let i =0; i< bookDb.length;i++){ %>
+    <tr>
+      <td>
+        <%= bookDb[i].title %>
+      </td>
+      <td>
+        <%= bookDb[i].author %>
+      </td>
+      <td>
+        <%= bookDb[i].topic %>
+      </td>
+      <td>
+        <%= bookDb[i].cost %>
+      </td>
+    </tr>
+    <% }%>
+  </table>
+</h3>
+</body>
+</html>

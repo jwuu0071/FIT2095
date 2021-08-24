@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h1> Welcome  <%= username%> </h1>
+    </br>
+    <h3>The available cars are:
+        <ul>
+            <% for ( let i =0; i< carDb.length;i++){ %>
+                <li>
+                    <%= carDb[i].carId %>|<%= carDb[i].carMake %>|<%= carDb[i].carModel %>|<%= carDb[i].carYear %>
+                </li>
+                <% }%>
+        </ul>
+    </h3>
+</body>
+</html>
