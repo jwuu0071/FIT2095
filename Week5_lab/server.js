@@ -54,13 +54,23 @@ app.get('/listbook', function (req, res) {
     })
 });
 
-app.get("/deletebook", function (req,res){
-    res.render("deletebook.html")
+app.get("/deletebookbytopic", function (req,res){
+    res.render("deletebookbytopic.html")
 })
 
-app.post("/deletebookdata", function (req,res){
+app.post("/deletebookbytopic", function (req,res){
     let bookdetails = req.body;
     db.collection("bookstore").deleteMany({topic:{ $eq: bookdetails.bookTopic }});
+    res.redirect("/listbook")
+})
+
+app.get("/deletebookbydate", function (req,res){
+    res.render("deletebookbydate.html")
+})
+
+app.post("/deletebookbydate", function (req,res){
+    let bookdetails = req.body;
+    db.collection("bookstore").deleteMany({date:{ $lt: bookdetails.bookDate }});
     res.redirect("/listbook")
 })
 
