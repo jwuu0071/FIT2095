@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Doctors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <img src="monash.png" width = 400 height =200 href='/'>
+    <p></p>
+</head>
+<body>
+<a class="btn btn-primary" href="/">Home Page</a>
+<a class="btn btn-primary" href="adddoctors">Add Doctor</a>
+<a class="btn btn-primary" href="addpatients">Add Patient</a>
+<a class="btn btn-primary" href="listdoctors">List Doctors</a>
+<a class="btn btn-primary" href="listpatients">List Patients</a>
+<a class="btn btn-primary" href="deletepatient">Delete Patient</a>
+<a class="btn btn-primary" href="adddoctor">Delete Doctor</a>
+<div class="container">
+    <h2>New Doctor Form</h2>
+    <form action="/deletepatientpost" method="POST">
+        <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="form-control" name = "fullName">
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
